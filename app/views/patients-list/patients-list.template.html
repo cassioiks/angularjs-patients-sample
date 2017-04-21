@@ -1,0 +1,37 @@
+<h2>Patients List</h2>
+<hr>
+<table>
+    <tr>
+        <th ng-click="$ctrl.sortBy('name');">
+            Name
+            <span class="sortorder" ng-show="$ctrl.propertyName === 'name'" ng-class="{reverse: $ctrl.reverse}"></span>
+        </th>
+        <th ng-click="$ctrl.sortBy('gender');">Gender
+            <span class="sortorder" ng-show="$ctrl.propertyName === 'gender'" ng-class="{reverse: $ctrl.reverse}"></span>
+        </th>
+        <th ng-click="$ctrl.sortBy('age');">Age (years)
+            <span class="sortorder" ng-show="$ctrl.propertyName === 'age'" ng-class="{reverse: $ctrl.reverse}"></span>
+        </th>
+        <th ng-click="$ctrl.sortBy('heightCm');">Height (cm)
+            <span class="sortorder" ng-show="$ctrl.propertyName === 'heightCm'" ng-class="{reverse: $ctrl.reverse}"></span>
+        </th>
+        <th ng-click="$ctrl.sortBy('weightKg');">Weight (kg)
+            <span class="sortorder" ng-show="$ctrl.propertyName === 'weightKg'" ng-class="{reverse: $ctrl.reverse}"></span>
+        </th>
+        <th ng-click="$ctrl.sortBy('bmi');">Body Mass Index
+            <span class="sortorder" ng-show="$ctrl.propertyName === 'bmi'" ng-class="{reverse: $ctrl.reverse}"></span>
+        </th>
+        <th ng-click="$ctrl.sortBy('activityLevel');">Activity Level
+            <span class="sortorder" ng-show="$ctrl.propertyName === 'activityLevel'" ng-class="{reverse: $ctrl.reverse}"></span>
+        </th>
+    </tr>
+        <tr ng-repeat="patient in $ctrl.patients | orderBy:$ctrl.propertyName:$ctrl.reverse" ng-click="$ctrl.onRowClick(patient);" class="patientsList">
+            <td>{{patient.name}}</td>
+            <td>{{patient.gender}}</td>
+            <td>{{patient.age}}</td>
+            <td>{{patient.heightCm}}</td>
+            <td>{{patient.weightKg}}</td>
+            <td>{{patient.bmi}}</td>
+            <td><activity-level patient="patient"></activity-level></td>
+        </tr>
+</table>

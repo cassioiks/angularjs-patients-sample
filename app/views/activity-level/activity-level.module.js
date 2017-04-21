@@ -1,0 +1,1 @@
+angular.module('activityLevel',['core.patientSummary','core.activities']);

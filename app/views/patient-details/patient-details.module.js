@@ -1,0 +1,1 @@
+var patientDetails = angular.module("patientDetails", ['ngRoute', 'core.patients', 'core.patientSummary']);

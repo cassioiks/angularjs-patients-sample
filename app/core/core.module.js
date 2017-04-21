@@ -1,0 +1,1 @@
+angular.module('core', ['core.patients', 'core.patientSummary', 'core.activities']);

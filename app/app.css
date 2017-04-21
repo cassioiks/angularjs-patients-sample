@@ -1,0 +1,45 @@
+table, th , td {
+  border: 1px solid grey;
+  border-collapse: collapse;
+  padding: 5px;
+}
+table tr:nth-child(odd) {
+  background-color: #f1f1f1;
+}
+table tr:nth-child(even) {
+  background-color: #ffffff;
+}
+
+.patientsList:hover {
+  background-color: #ffff99;
+  cursor: pointer;
+  color: blue;
+  text-decoration: underline;
+}
+
+.goodActivity{
+    color: green;
+    font-weight: bold;
+    display: inline;
+}
+
+.badActivity{
+    color: red;
+    font-weight: bold;
+    display: inline;
+}
+
+.custLabel, .custContent{
+  display: inline; 
+}
+
+.custLabel{
+  font-weight: bold;
+}
+
+.sortorder:after {
+  content: '\25b2';   /*BLACK UP-POINTING TRIANGLE*/
+}
+.sortorder.reverse:after {
+  content: '\25bc';   /*BLACK DOWN-POINTING TRIANGLE*/
+}

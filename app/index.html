@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en" ng-app="patientsApp">
+  <head>
+    <meta charset="utf-8">
+    <title>Patients</title>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="app.css" />
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.js"></script>
+    <script src="app.module.js"></script>
+    <script src="app.config.js"></script>
+    <script src="views/patients-list/patients-list.module.js"></script>
+    <script src="views/patients-list/patients-list.component.js"></script>
+    <script src="views/patient-details/patient-details.module.js"></script>
+    <script src="views/patient-details/patient-details.component.js"></script>
+    <script src="views/activity-level/activity-level.module.js"></script>
+    <script src="views/activity-level/activity-level.component.js"></script>
+    <script src="core/core.module.js"></script>
+    <script src="core/activities/activities.module.js"></script>
+    <script src="core/activities/activities.service.js"></script>
+    <script src="core/patient-summary/patient-summary.module.js"></script>
+    <script src="core/patient-summary/patient-summary.service.js"></script>
+    <script src="core/patients/patients.module.js"></script>
+    <script src="core/patients/patients.service.js"></script>
+  </head>
+  <body>
+
+    <div ng-view></div>
+
+  </body>
+</html>

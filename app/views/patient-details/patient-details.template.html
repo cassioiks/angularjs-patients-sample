@@ -1,0 +1,27 @@
+<h2><div>{{$ctrl.patient.name}}</div></h2>
+<hr>
+<div><div class="custLabel">Gender: </div><div class="custContent">{{$ctrl.patient.gender}}</div></div>
+<div><div class="custLabel">Age: </div><div class="custContent">{{$ctrl.patient.age}}</div></div>
+<div><div class="custLabel">Height (cm): </div><div class="custContent">{{$ctrl.patient.heightCm}}</div></div>
+<div><div class="custLabel">Weight (kg): </div><div class="custContent">{{$ctrl.patient.weightKg}}</div></div>
+<div><div class="custLabel">BMI: </div><div class="custContent">{{$ctrl.patient.bmi}}</div></div>
+
+<div><div class="custLabel">Total Moderate Activity Time (mins): </div><div class="custContent">{{$ctrl.patient.moderateActivityTime}}</div></div>
+<div><div class="custLabel">Total Vigorous Activity Time (mins): </div><div class="custContent">{{$ctrl.patient.vigorousActivityTime}}</div></div>
+<div><div class="custLabel">Level of activity: </div><div class="custContent"><activity-level patient="$ctrl.patient"></activity-level></div>
+
+<hr>
+
+<h4>Patient Activity Summary</h4>
+<table>
+    <tr>
+        <th>Activity</th>
+        <th>Intensity</th>
+        <th>Minutes</th>
+    </tr>
+        <tr ng-repeat="activity in $ctrl.patient.patientSummary" >
+            <td>{{activity.activity}}</td>
+            <td>{{activity.intensity}}</td>
+            <td>{{activity.minutes}}</td>
+        </tr>
+</table>
